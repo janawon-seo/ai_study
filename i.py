@@ -14,5 +14,18 @@ print(tmp_img.shape)
 cropped = tmp_img[int(result[0][1]):int(result[0][3]), int(result[0][0]):int(result[0][2])]
 print(cropped.shape)
 cv2.imwrite('people1.png', cropped)
+
+cropped = tmp_img[int(result[1][1]):int(result[1][3]), int(result[1][0]):int(result[1][2])]
+cv2.imwrite('people2.png', cropped)
+
+cropped = tmp_img[int(result[2][1]):int(result[2][3]), int(result[2][0]):int(result[2][2])]
+cv2.imwrite('people3.png', cropped)
+
+cropped = tmp_img[int(result[3][1]):int(result[3][3]), int(result[3][0]):int(result[3][2])]
+cv2.imwrite('people4.png', cropped)
+
+cropped = tmp_img[int(result[4][1]):int(result[4][3]), int(result[4][0]):int(result[4][2])]
+cv2.imwrite('people5.png', cropped)
+
 cv2.rectangle(tmp_img, (int(results.xyxy[0][0][0].item()), int(results.xyxy[0][0][1].item())), (int(results.xyxy[0][0][2].item()), int(results.xyxy[0][0][3].item())), (255,255,255))
 cv2.imwrite('result1.png', tmp_img)
